@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>おつまみランダムページ</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class='col-md-8'>
+          <h1>ボタンを押してね</h1>
+          <input type="button" class='btn btn-outline-primary' value="押すなよ？？？絶対押すなよ？？？" onclick="getImage()">
+          <br><br><p id="name"></p>
+          <img class='img-fluid' id="im1" alt="おつまみ">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+    function getImage(){
+
+      var arr =
+      ['./img/S__77578242.jpg','./img/S__77578244.jpg', './img/S__77578245.jpg', './img/S__77578246.jpg', './img/S__77578247.jpg',
+       './img/S__77578248.jpg','./img/S__77578249.jpg', './img/S__77578250.jpg', './img/S__77578251.jpg', './img/S__77578252.jpg',
+       './img/S__77578253.jpg','./img/S__77578255.jpg', './img/S__77578256.jpg', './img/S__77578257.jpg', './img/S__77578258.jpg',
+       './img/S__77578259.jpg','./img/S__77578260.jpg', './img/S__77578261.jpg', './img/S__77578262.jpg', './img/S__77578263.jpg',
+       './img/S__77578264.jpg','./img/S__77578266.jpg', './img/S__77578267.jpg', './img/S__77578268.jpg', './img/S__77578269.jpg',
+       './img/S__77578270.jpg'];
+
+       var array =
+       ['フライドポテト', 'チーズonチーズ餃子', '明太ポテトピザベーコンチーズマシマシ', '豚バラミルフィーユカツ', '鶏の竜田揚げ',
+        'エリンギとエビのアヒージョ', 'せせりとキャベツ焼き', 'ニラレバ', '豚のしょうが焼き', '鮭えのきバター焼き',
+        '広島リスペクト焼き', '目玉焼きそば', '豚バラのねぎ巻き巻き', 'とん平焼き', 'パリパリ鶏皮',
+        '豚タン焼き', '巻かない春巻き', '焼き麻婆茄子', '丸ゲリータピザ', 'タコ焼きそば',
+        'ジンギスカン串', '投げやりチーズナゲット', '豚キムチーズ', 'ペペロンチーノチキンバー', '頭の悪いジャーマンポテト', '包まない餃子'];
+
+        var obj = document.getElementById("im1");
+        var a = Math.floor(Math.random() * arr.length);
+        obj.src = arr[a];
+        var name = document.getElementById("name").innerHTML = array[a];
+    }
+    </script>
+  </body>
+</html>
